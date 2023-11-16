@@ -7,11 +7,12 @@ import {Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-    <div style={{ backgroundColor: 'white' }}>
+    <div>
         <Routes>
           <Route path='/' element={<MainLayout/>}>
             <Route index element={<Home/>}/>
-            <Route path='/about-us' element={<Home />} />
+            <Route path='/skills' element={<skills />} />
+            <Route path='/projects' element={<what />} />
             <Route path='*' element={<p>Invalid URL</p>}/>
           </Route>
         </Routes>

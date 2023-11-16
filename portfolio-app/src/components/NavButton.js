@@ -1,6 +1,6 @@
 import { NavLink, useResolvedPath, useMatch } from "react-router-dom";
 import Button from "@mui/material/Button";
-//import "../style.css";
+import { useEffect, useState } from "react";
 
 /**
  * A button for navigation, wrapped in a NavLink component from react-router-dom.
@@ -12,11 +12,12 @@ import Button from "@mui/material/Button";
 function NavButton(props) {
     let resolved = useResolvedPath(props.to);
     let match = useMatch({ path: resolved.pathname, end: true });
+    const [mouseOverButton, setMouseOverbutton] = useState(false);
 
     const primaryButtonStyle = {
-        color: "black",
+        color: "#dddfea",
         padding: "5px 10px",
-        margin: "5px",
+        margin: "20px",
         cursor: "pointer",
         transitionProperty: "border, font-weight",
         transitionDuration: "0.1s",
@@ -33,9 +34,9 @@ function NavButton(props) {
     };
 
     const activePrimaryButtonStyle = {
-        color: "black",
+        color: "#dddfea",
         padding: "5px 10px",
-        margin: "5px",
+        margin: "20px",
         cursor: "pointer",
         transitionProperty: "border, font-weight",
         transitionDuration: "0.1s",
@@ -48,17 +49,42 @@ function NavButton(props) {
         fontWeight: "bold",
         borderBottomWidth: "1px",
         borderBottomStyle: "solid",
-        borderBottomColor: "black"
+        borderBottomColor: "#dddfea"
     };
 
 
 
     return (
         <NavLink to={props.to}>
-            <p1
-                className="buttonStyle"
-                style={match ? activePrimaryButtonStyle : primaryButtonStyle}
-            >{props.label}</p1>
+            {
+                props.styled ? 
+                <Button 
+                    variant="outlined"
+                    color="primary"
+                    size="large"
+                    style={mouseOverButton ? 
+                        {
+                            fontFamily: "monospace",
+                            color: "#dddfea",
+                            marginLeft: "20px",
+                            marginRight: "20px",
+                            fontWeight: "bold",
+                        } : 
+                        {
+                            fontFamily: "monospace",
+                            color: "#b9b9c9",
+                            marginLeft: "20px",
+                            marginRight: "20px",
+                            fontWeight: "normal",
+                        }}
+                    onMouseEnter={() => setMouseOverbutton(true)}
+                    onMouseLeave={() => setMouseOverbutton(false)}
+                >{props.label}</Button>
+                : 
+                <p1
+                    style={match ? activePrimaryButtonStyle : primaryButtonStyle}
+                >{props.label}</p1>
+            }
         </NavLink>
 
 

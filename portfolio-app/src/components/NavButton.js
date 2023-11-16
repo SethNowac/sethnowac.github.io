@@ -2,6 +2,7 @@ import { NavLink, useResolvedPath, useMatch } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useEffect, useState } from "react";
 
+
 /**
  * A button for navigation, wrapped in a NavLink component from react-router-dom.
  * @param {object} props - The props object containing the label and destination of the button.
@@ -86,7 +87,6 @@ function NavButton(props) {
                 >{props.label}</p1>
             }
         </NavLink>
-
 
     );
 }

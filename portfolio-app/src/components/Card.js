@@ -22,7 +22,8 @@ function Card({ children, image, callback }) {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    fontSize: "calc(10px)"
+    fontSize: "calc(10px)",
+    margin: "10px"
 };
 
 const activeCardStyle = {
@@ -36,7 +37,8 @@ const activeCardStyle = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  fontSize: "calc(10px)"
+  fontSize: "calc(10px)",
+  margin: "10px"
 };
 
   return (

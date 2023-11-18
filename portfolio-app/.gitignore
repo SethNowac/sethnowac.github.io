@@ -8,8 +8,6 @@
 # testing
 /coverage
 
-/src/projects/games/CarDodge.zip
-
 # production
 /build
 

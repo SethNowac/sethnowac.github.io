@@ -1,6 +1,9 @@
+import Card from "../components/Card";
 import NavButton from "../components/NavButton";
 
 export default function Home() {
+    const interests = ["Software Development", "Web Design", "Game Development", "Art", "3D Modeling", "Animation", "Music"]
+
     return(
             <div style={{
                 textAlign: "center",
@@ -40,10 +43,22 @@ export default function Home() {
                 <div style={{ 
                     display: "flex",
                     justifyContent: "center",
-                    marginBottom: "40px"
+                    marginBottom: "80px"
                 }}>
                     <NavButton to="/skills" label="Current Skills" styled={true}/>
                     <NavButton to="/projects" label="View my Projects" styled={true}/>
+                </div>
+                <div style={{
+                    color: "#dddfea",
+                    backgroundColor: "#2c3754",
+                    borderRadius: "5px",
+                    padding: "5px"
+                }}>
+                    <h2>Interests</h2>
+                    {interests.forEach(element => {
+                        <p1>{element}</p1>
+                    })}
+
                 </div>
             </div>
     )

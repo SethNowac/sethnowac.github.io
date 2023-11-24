@@ -48,7 +48,20 @@ const activeCardStyle = {
       onMouseLeave={() => setMouseOverbutton(false)}
       onClick={()=>{callback()}}
     >
-      {image && <img className="card-img" src={image} alt=""></img>}
+      {image && <img style={ mouseOverButton? {
+        maxHeight: "100%",
+        maxWidth: "100%",
+        width: "310px",
+        height: "220px",
+        borderRadius: "4px"
+      } :
+      {
+        maxHeight: "100%",
+        maxWidth: "100%",
+        width: "300px",
+        height: "210px",
+        borderRadius: "4px"
+      }} src={image} alt=""></img>}
       {children}
     </div>
   );

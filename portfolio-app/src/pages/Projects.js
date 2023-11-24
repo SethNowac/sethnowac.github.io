@@ -1,8 +1,17 @@
 import Card from "../components/Card";
 import CarDodgeImage from "../images/car_dodge_screenshot.png";
+import BudgetAppImage from "../images/budget_app_screenshot.png";
 import CarDodgeGame from "../projects/games/CarDodge.zip"
+import BudgetApp from "../projects/applications/BudgetApp.zip"
 import Carousel from 'react-multi-carousel';
+import TriviaAppImage from "../images/trivia_app_screenshot.png";
+import TriviaApp from "../projects/applications/TriviaApp.zip"
+import GameOrganizerImage from "../images/game_organizer_screenshot.png";
+import MusicBrosImage from "../images/music_bros_screenshot.png";
+import EscapeThxGame from "../projects/games/EscapeTheTHX.zip"
+import EscapeThxImage from "../images/escape_thx_screenshot.png";
 import 'react-multi-carousel/lib/styles.css';
+import { Link, NavLink } from 'react-router-dom';
 
 const responsive = {
     superLargeDesktop: {
@@ -44,35 +53,147 @@ function downloadFile(filename, filepath) {
 
 export default function Projects() {
     return (
-        <div style={{
-            margin:"40px"
-        }}>
+        <>
             <h1 style={{
-                color: "#dddfea"
-            }}>Games</h1>
-            <Carousel
-                swipeable={false}
-                draggable={true}
-                showDots={true}
-                responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
-                infinite={false}
-                autoPlay={false}
-                autoPlaySpeed={5000}
-                keyBoardControl={true}
-                customTransition="all 0.4s ease-in-out"
-                transitionDuration={500}
-                containerClass="carousel-container"
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-            >
-                <Card image={CarDodgeImage} callback={()=> {
-                        downloadFile(`CarDodge.zip`, CarDodgeGame);
-                    }}
+                    color: "#dddfea",
+                    fontSize: "70px",
+                    fontWeight: "bold",
+                    marginBottom: "60px",
+                    marginTop:"80px",
+                    textAlign: "center",
+            }}>Projects I Have Made</h1>
+
+            <div style={{
+                margin:"40px"
+            }}>
+                <h1 style={{
+                    color: "#dddfea"
+                }}>Games</h1>
+                <Carousel
+                    swipeable={false}
+                    draggable={true}
+                    showDots={false}
+                    responsive={responsive}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={false}
+                    autoPlay={false}
+                    autoPlaySpeed={5000}
+                    keyBoardControl={true}
+                    customTransition="all 0.4s ease-in-out"
+                    transitionDuration={500}
+                    containerClass="carousel-container"
+                    dotListClass="custom-dot-list-style"
+                    itemClass="carousel-item-padding-40-px"
                 >
-                    <h1>Car Dodge</h1>
-                </Card>
-            </Carousel>
-        </div>
+                    <NavLink to=""
+                        style={{ color: 'inherit', textDecoration: 'none' }}>
+                        <Card image={CarDodgeImage} callback={()=> {
+                                downloadFile(`CarDodge.zip`, CarDodgeGame);
+                            }}
+                            >
+                            <h1>Car Dodge</h1>
+                        </Card>
+                    </NavLink>
+
+                    <NavLink to=""
+                        style={{ color: 'inherit', textDecoration: 'none' }}>
+                        <Card image={EscapeThxImage} callback={()=> {
+                                downloadFile(`EscapeTheTHX.zip`, EscapeThxGame);
+                            }}
+                            >
+                            <h1>Escape The THX</h1>
+                        </Card>
+                    </NavLink>
+                </Carousel>
+            </div>
+
+            <div style={{
+            margin:"40px"
+            }}>
+                <h1 style={{
+                    color: "#dddfea"
+                }}>Applications</h1>
+                <Carousel
+                    swipeable={false}
+                    draggable={true}
+                    showDots={false}
+                    responsive={responsive}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={false}
+                    autoPlay={false}
+                    autoPlaySpeed={5000}
+                    keyBoardControl={true}
+                    customTransition="all 0.4s ease-in-out"
+                    transitionDuration={500}
+                    containerClass="carousel-container"
+                    dotListClass="custom-dot-list-style"
+                    itemClass="carousel-item-padding-40-px"
+                >
+                    <NavLink to=""
+                        style={{ color: 'inherit', textDecoration: 'none' }}>
+                        <Card image={BudgetAppImage} callback={()=> {
+                                downloadFile(`BudgetApp.zip`, BudgetApp);
+                            }}
+                        >
+                            <h1>Budget App</h1>
+                        </Card>
+                    </NavLink>
+
+                    <NavLink to=""
+                        style={{ color: 'inherit', textDecoration: 'none' }}>
+                        <Card image={TriviaAppImage} callback={()=> {
+                                downloadFile(`TriviaApp.zip`, TriviaApp);
+                            }}
+                        >
+                            <h1>Trivia App</h1>
+                        </Card>
+                    </NavLink>
+                </Carousel>
+            </div>
+
+            <div style={{
+            margin:"40px"
+            }}>
+                <h1 style={{
+                    color: "#dddfea"
+                }}>Websites</h1>
+                <Carousel
+                    swipeable={false}
+                    draggable={true}
+                    showDots={false}
+                    responsive={responsive}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={false}
+                    autoPlay={false}
+                    autoPlaySpeed={5000}
+                    keyBoardControl={true}
+                    customTransition="all 0.4s ease-in-out"
+                    transitionDuration={500}
+                    containerClass="carousel-container"
+                    dotListClass="custom-dot-list-style"
+                    itemClass="carousel-item-padding-40-px"
+                >
+                    <NavLink to="https://game-organizer-front-end.onrender.com/"
+                        style={{ color: 'inherit', textDecoration: 'none' }}>
+                        <Card image={GameOrganizerImage} callback={()=> {
+                            
+                            }}
+                        >
+                            <h1>Game Organizer</h1>
+                        </Card>
+                    </NavLink>
+
+                    <NavLink to="https://musicbros.000webhostapp.com"
+                        style={{ color: 'inherit', textDecoration: 'none' }}>
+                        <Card image={MusicBrosImage} callback={()=> {
+                            
+                            }}
+                        >
+                            <h1>Music Bros</h1>
+                        </Card>
+                    </NavLink>
+                </Carousel>
+            </div>
+        </>
     )
 }

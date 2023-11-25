@@ -11,6 +11,7 @@ import MusicBrosImage from "../images/music_bros_screenshot.png";
 import EscapeThxGame from "../projects/games/EscapeTheTHX.zip"
 import EscapeThxImage from "../images/escape_thx_screenshot.png";
 import 'react-multi-carousel/lib/styles.css';
+import './Projects.css'
 import { Link, NavLink } from 'react-router-dom';
 
 const responsive = {
@@ -54,19 +55,19 @@ function downloadFile(filename, filepath) {
 export default function Projects() {
     return (
         <>
-            <h1 style={{
+            <h1 className="fade" style={{
                     color: "#dddfea",
                     fontSize: "70px",
                     fontWeight: "bold",
                     marginBottom: "60px",
                     marginTop:"80px",
                     textAlign: "center",
-            }}>Projects I Have Made</h1>
+            }}>My Projects</h1>
 
             <div style={{
                 margin:"40px"
             }}>
-                <h1 style={{
+                <h1 className="fade" style={{
                     color: "#dddfea"
                 }}>Games</h1>
                 <Carousel
@@ -84,33 +85,27 @@ export default function Projects() {
                     containerClass="carousel-container"
                     dotListClass="custom-dot-list-style"
                     itemClass="carousel-item-padding-40-px"
+                    className="slide"
                 >
-                    <NavLink to=""
-                        style={{ color: 'inherit', textDecoration: 'none' }}>
-                        <Card image={CarDodgeImage} callback={()=> {
-                                downloadFile(`CarDodge.zip`, CarDodgeGame);
-                            }}
-                            >
-                            <h1>Car Dodge</h1>
-                        </Card>
-                    </NavLink>
-
-                    <NavLink to=""
-                        style={{ color: 'inherit', textDecoration: 'none' }}>
-                        <Card image={EscapeThxImage} callback={()=> {
-                                downloadFile(`EscapeTheTHX.zip`, EscapeThxGame);
-                            }}
-                            >
-                            <h1>Escape The THX</h1>
-                        </Card>
-                    </NavLink>
+                    <Card image={CarDodgeImage} callback={()=> {
+                            downloadFile(`CarDodge.zip`, CarDodgeGame);
+                        }}
+                        >
+                        <h1>Car Dodge</h1>
+                    </Card>
+                    <Card image={EscapeThxImage} callback={()=> {
+                            downloadFile(`EscapeTheTHX.zip`, EscapeThxGame);
+                        }}
+                        >
+                        <h1>Escape The THX</h1>
+                    </Card>
                 </Carousel>
             </div>
 
             <div style={{
             margin:"40px"
             }}>
-                <h1 style={{
+                <h1 className="fade" style={{
                     color: "#dddfea"
                 }}>Applications</h1>
                 <Carousel
@@ -128,33 +123,28 @@ export default function Projects() {
                     containerClass="carousel-container"
                     dotListClass="custom-dot-list-style"
                     itemClass="carousel-item-padding-40-px"
+                    className="slide"
                 >
-                    <NavLink to=""
-                        style={{ color: 'inherit', textDecoration: 'none' }}>
-                        <Card image={BudgetAppImage} callback={()=> {
-                                downloadFile(`BudgetApp.zip`, BudgetApp);
-                            }}
-                        >
-                            <h1>Budget App</h1>
-                        </Card>
-                    </NavLink>
+                    <Card image={BudgetAppImage} callback={()=> {
+                            downloadFile(`BudgetApp.zip`, BudgetApp);
+                        }}
+                    >
+                        <h1>Budget App</h1>
+                    </Card>
 
-                    <NavLink to=""
-                        style={{ color: 'inherit', textDecoration: 'none' }}>
-                        <Card image={TriviaAppImage} callback={()=> {
-                                downloadFile(`TriviaApp.zip`, TriviaApp);
-                            }}
-                        >
-                            <h1>Trivia App</h1>
-                        </Card>
-                    </NavLink>
+                    <Card image={TriviaAppImage} callback={()=> {
+                            downloadFile(`TriviaApp.zip`, TriviaApp);
+                        }}
+                    >
+                        <h1>Trivia App</h1>
+                    </Card>
                 </Carousel>
             </div>
 
             <div style={{
             margin:"40px"
             }}>
-                <h1 style={{
+                <h1 className="fade" style={{
                     color: "#dddfea"
                 }}>Websites</h1>
                 <Carousel
@@ -172,9 +162,10 @@ export default function Projects() {
                     containerClass="carousel-container"
                     dotListClass="custom-dot-list-style"
                     itemClass="carousel-item-padding-40-px"
+                    className="slide"
                 >
                     <NavLink to="https://game-organizer-front-end.onrender.com/"
-                        style={{ color: 'inherit', textDecoration: 'none' }}>
+                        style={{ color: 'inherit', textDecoration: 'none', cursor: 'default' }}>
                         <Card image={GameOrganizerImage} callback={()=> {
                             
                             }}
@@ -184,7 +175,7 @@ export default function Projects() {
                     </NavLink>
 
                     <NavLink to="https://musicbros.000webhostapp.com"
-                        style={{ color: 'inherit', textDecoration: 'none' }}>
+                        style={{ color: 'inherit', textDecoration: 'none', cursor: 'default' }}>
                         <Card image={MusicBrosImage} callback={()=> {
                             
                             }}

@@ -1,6 +1,7 @@
 import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home';
 import Projects from '../pages/Projects';
+import Skills from '../pages/Skills';
 import './App.css';
 import Header from './Header';
 import Main from './Main';
@@ -12,7 +13,7 @@ function App() {
           <Routes>
             <Route path='/' element={<MainLayout/>}>
               <Route index element={<Home/>}/>
-              <Route path='/skills' element={<skills />} />
+              <Route path='/skills' element={<Skills />} />
               <Route path='/projects' element={<Projects />} />
               <Route path='*' element={<p>Invalid URL</p>}/>
             </Route>

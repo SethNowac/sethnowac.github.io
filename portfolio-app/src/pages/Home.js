@@ -1,13 +1,15 @@
 import Card from "../components/Card";
 import NavButton from "../components/NavButton";
+import './Home.css';
 
 export default function Home() {
     const interests = ["Software Development", "Web Design", "Game Development", "Art", "3D Modeling", "Animation", "Music"]
 
     return(
-            <div style={{
+            <div className="fade-slide" style={{
                 textAlign: "center",
-                margin: "120px"
+                margin: "120px 60px",
+                justifyContent: "center",
             }}>
                 <h1 style={{
                     color: "#dddfea",
@@ -21,7 +23,6 @@ export default function Home() {
                     fontWeight: "bold",
                     marginTop: "20px",
                     marginBottom: "0"
-                    
                 }}>Software Developer</h3>
                 <hr style={{
                     maxWidth: "70%",
@@ -30,8 +31,11 @@ export default function Home() {
                 }}/>
                 <div style={{
                     color: "#dddfea",
+                    fontSize: "17px",
                     fontWeight: "normal",
-                    fontFamily: "serif"
+                    fontFamily: "serif",
+                    margin: "auto",
+                    maxWidth: "70%"
                 }}>
                     <p>I am a software developer currently based in the Greater Metropolitarian Area. 
                     I am in my third year at John Abbott College studying Computer Science Technology, passionate about
@@ -43,7 +47,10 @@ export default function Home() {
                 <div style={{ 
                     display: "flex",
                     justifyContent: "center",
-                    marginBottom: "80px"
+                    marginTop: "10px",
+                    marginBottom: "80px",
+                    position:"relative",
+                    left:"7px"
                 }}>
                     <NavButton to="/skills" label="Current Skills" styled={true}/>
                     <NavButton to="/projects" label="View my Projects" styled={true}/>
@@ -51,13 +58,30 @@ export default function Home() {
                 <div style={{
                     color: "#dddfea",
                     backgroundColor: "#2c3754",
-                    borderRadius: "5px",
-                    padding: "5px"
+                    borderRadius: "10px",
+                    padding: "5px 5px 20px 5px",
+                    maxWidth: "72%",
+                    margin: "auto"
                 }}>
-                    <h2>Interests</h2>
-                    {interests.forEach(element => {
-                        <p1>{element}</p1>
-                    })}
+                    <h1>Interests</h1>
+                    {interests.map((element) => (
+                        <p1 style={{
+                            fontFamily: "monospace",
+                            color: "#dddfea",
+                            padding: "10px 20px",
+                            margin: "10px",
+                            textDecoration: "none",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            fontSize: "18px",
+                            fontWeight: "normal",
+                            borderWidth: "1px",
+                            borderStyle: "solid",
+                            borderColor: "gray",
+                            borderRadius: "7px"
+                        }}>{element}</p1>
+                    ))}
 
                 </div>
             </div>

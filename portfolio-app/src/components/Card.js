@@ -34,6 +34,7 @@ const activeCardStyle = {
   maxHeight: "310px",
   backgroundColor:"rgb(161, 161, 161)",
   padding: "5px 5px",
+  cursor: "pointer",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

@@ -15,6 +15,7 @@ export default function Header() {
                 <NavButton to="/skills" label="Skills" styled={false}/>
                 <NavButton to="/projects" label="My Work" styled={false} />
                 <NavButton to="https://github.com/SethNowac" label="Github" styled={false} />
+                <NavButton to="/contact" label="Contact" styled={false} />
             </div>
         </header>
     )

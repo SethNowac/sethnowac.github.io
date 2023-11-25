@@ -1,0 +1,38 @@
+.styled-textbox {
+    box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	border: none;
+	border-bottom: 1px solid rgb(19, 25, 30);
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+    color: #dddfea;
+	height: 45px;
+}
+
+#styled-form {
+	font-family: 'Open Sans Condensed', arial, sans;
+	width: 500px;
+	padding: 30px;
+	background: #2c3754;
+	margin: 50px auto;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+}
+
+#styled-button {
+	background-color: #1e2943;
+	border: 1px solid #171717;
+	display: inline-block;
+	cursor: pointer;
+	color: #dddfea;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 14px;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+    margin-top: 20px;
+}

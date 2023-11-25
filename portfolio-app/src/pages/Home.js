@@ -6,30 +6,30 @@ export default function Home() {
     const interests = ["Software Development", "Web Design", "Game Development", "Art", "3D Modeling", "Animation", "Music"]
 
     return(
-            <div className="fade-slide" style={{
+            <div style={{
                 textAlign: "center",
                 margin: "120px 60px",
                 justifyContent: "center",
             }}>
-                <h1 style={{
+                <h1 className="fade" style={{
                     color: "#dddfea",
                     fontSize: "80px",
                     fontWeight: "bold",
                     marginBottom: "0px",
                 }}>Seth Nowac</h1>
-                <h3 style={{
+                <h3 className="fade" style={{
                     color: "#b9b9c9",
                     fontSize: "40px",
                     fontWeight: "bold",
                     marginTop: "20px",
                     marginBottom: "0"
                 }}>Software Developer</h3>
-                <hr style={{
+                <hr className="fade-slide" style={{
                     maxWidth: "70%",
                     marginTop: "50px",
                     marginBottom: "50px",
                 }}/>
-                <div style={{
+                <div className="fade-slide" style={{
                     color: "#dddfea",
                     fontSize: "17px",
                     fontWeight: "normal",
@@ -44,7 +44,7 @@ export default function Home() {
                     <br/>
 
                 </div>
-                <div style={{ 
+                <div className="fade-slide" style={{ 
                     display: "flex",
                     justifyContent: "center",
                     marginTop: "10px",
@@ -55,7 +55,7 @@ export default function Home() {
                     <NavButton to="/skills" label="Current Skills" styled={true}/>
                     <NavButton to="/projects" label="View my Projects" styled={true}/>
                 </div>
-                <div style={{
+                <div className="fade-slide" style={{
                     color: "#dddfea",
                     backgroundColor: "#2c3754",
                     borderRadius: "10px",

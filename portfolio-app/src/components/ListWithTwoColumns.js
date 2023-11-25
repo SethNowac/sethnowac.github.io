@@ -22,7 +22,7 @@ export default function ListWithTwoColumns({items}) {
             columns={16}
         >
             {items.map((item) => (
-                  <Grid textAlign='start'  xs={8}>
+                  <Grid textAlign='start' sm={8} md={8} xs={16}>
                         <Item><VerifiedIcon style={{marginRight: "15px"}}/>{item}</Item>
                   </Grid>
             ))}
